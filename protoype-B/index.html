@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
-</script>
+    </script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -19,16 +19,21 @@
         <div id="layoutSidenav_content">
             <main>
                 <div >
-                    <h1 >Ouvrages</h1>
+                    <div class="navList">
+                        <h1 >Ouvrages</h1>
                     <ol class="breadcrumb mb-4">
                         <li ><a>Tableau de bord</a></li>
-                        <li >Ouvrages</li>
+                        <li >  Ouvrages</li>
                     </ol>
+                    </div>
+                    
 
                      
                         <div>
-
-                            <form id="formSubmit" >
+                            <button onclick=show(this)>show</button>
+                           
+                            <form  id="formSubmit" autocomplete="off">
+                                <div id="hide" onclick=hide(this) >x</div>
                                 <div class="col-md-6">
                                     <label for="inputTitle" >Title</label>
                                     <input type="text"  id="inputTitle">
@@ -54,23 +59,24 @@
                                         <option value="arabe">Arabe</option>
                                     </select>
                                 </div>
+                                
                                 <div class="col-12">
-                                    <label for="ovrageType" class="form-label">Type</label>
+                                    <label for="OvrageType" class="form-label">Type</label>
                                     <div>
-                                        <input value="Roman" name="ovrageType" type="radio" id="gridCheck">
+                                        <input value="Roman" name="OvrageType" type="radio" id="gridCheck">
                                         <label for="gridCheck">
                                             Roman
                                         </label>
                                     </div>
                                     <div>
-                                        <input value="Essai" name="ovrageType" type="radio" id="gridCheck">
+                                        <input value="Essai" name="OvrageType" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Essai
                                         </label>
                                     </div>
 
                                     <div>
-                                        <input  name="ovrageType" value="Bande-Dessinée" type="radio" id="gridCheck">
+                                        <input  name="OvrageType" value="Bande-Dessinée" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Bande-Dessinée
                                         </label>
@@ -88,7 +94,7 @@
                             📘
                         </div>
                         <div class="card-body">
-                            <table class="table" id="ovragesTable">
+                            <table class="table" id="OvragesTable">
                                 <thead>
                                     <tr>
                                         <th>Titre</th>
@@ -100,9 +106,10 @@
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
+
+                                 
                                 <tbody>
                                     <tr>
-                                        
                                     </tr>
                                 </tbody>
                             </table>
@@ -110,11 +117,21 @@
                     </div>
                 </div>
             </main>
-            <footer >
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
     </div>
-    <script src="js.js"></script>
+    <script src="java.js"></script>
 </body>
 
 </html>
