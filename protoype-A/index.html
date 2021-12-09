@@ -9,7 +9,7 @@
     <meta name="author" content="ESSARRAJ Fouad" />
     <title>Gestion des ouvrages</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
 </script>
 </head>
@@ -28,7 +28,7 @@
                      
                         <div>
 
-                            <form id="formSubmit" autocomplete="off">
+                            <form id="formSubmit" >
                                 <div class="col-md-6">
                                     <label for="inputTitle" >Title</label>
                                     <input type="text"  id="inputTitle">
@@ -55,22 +55,22 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <label for="workType" class="form-label">Type</label>
+                                    <label for="ovrageType" class="form-label">Type</label>
                                     <div>
-                                        <input value="Roman" name="workType" type="radio" id="gridCheck">
+                                        <input value="Roman" name="ovrageType" type="radio" id="gridCheck">
                                         <label for="gridCheck">
                                             Roman
                                         </label>
                                     </div>
                                     <div>
-                                        <input value="Essai" name="workType" type="radio" id="gridCheck">
+                                        <input value="Essai" name="ovrageType" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Essai
                                         </label>
                                     </div>
 
                                     <div>
-                                        <input  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
+                                        <input  name="ovrageType" value="Bande-Dessinée" type="radio" id="gridCheck">
                                         <label  for="gridCheck">
                                             Bande-Dessinée
                                         </label>
@@ -88,7 +88,7 @@
                             📘
                         </div>
                         <div class="card-body">
-                            <table class="table" id="worksTable">
+                            <table class="table" id="ovragesTable">
                                 <thead>
                                     <tr>
                                         <th>Titre</th>
@@ -110,17 +110,7 @@
                     </div>
                 </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
+            <footer >
             </footer>
         </div>
     </div>
