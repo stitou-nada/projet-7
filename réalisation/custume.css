@@ -1,0 +1,22 @@
+.sb-topnav{
+    background-color: #7c5f81 !important;
+}
+.sb-sidenav{
+    background-color: #7c5f81d0 !important;
+}
+.sb-sidenav-footer{
+
+    background-color: #7c5f8100!important;
+}
+.sb-nav-fixed{
+    background-color: #e3e1e4d3 !important;
+}
+.card {
+    background-color: #f0eff0d5!important;
+}
+#inputPrix{
+width: 136px !important;
+}
+#btn-primary{
+    background-color:#7c5f81 !important ;
+}
