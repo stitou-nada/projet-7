@@ -1,4 +1,8 @@
 var selectedRow = null
+document.getElementById("showFormBtn").addEventListener("click", function() {
+    var formN = document.getElementById('formN')
+    formN.classList.toggle("d-none")
+})
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
     var work = readwork();
@@ -10,11 +14,8 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     }
     resetForm();
 });
-
-
 function readwork() {
-
-    var work = {};
+   var work = {};
     work["title"] = document.getElementById("inputTitle").value;
     work["author"] = document.getElementById("inputAuthor").value;
     work["price"] = parseFloat(document.getElementById("inputPrix").value);
@@ -50,7 +51,7 @@ function insertNewRow(work) {
     cell6.innerHTML = work.type;
     
     cell7 = newRow.insertCell(6);
-    cell7.innerHTML = `<button onClick='onEdit(this)'>Edit</button>  <button onClick='onDelete(this)'>Delete</button>`;
+    cell7.innerHTML = `<button id="editB" onClick='onEdit(this)'>Edit</button>  <button  id="deletB" onClick='onDelete(this)'>Delete</button>`;
 
     }
     

@@ -15,12 +15,23 @@
     background-color: #f0eff0d5!important;
 }
 #inputPrix{
-width: 136px !important;
+     width: 136px !important;
+}
+#inputDate{
+    width: 200px !important;
 }
 .btn-primary{
     background-color:#7c5f81 !important ;
 }
 #showFormBtn{
     background-color:#7c5f81 !important ;
+    color: white;
+}
+#editB{
+    background-color: rgb(99, 97, 99) !important;
+    color: white;
+}
+#deletB{
+    background-color: rgb(184, 0, 0) !important;
     color: white;
 }
