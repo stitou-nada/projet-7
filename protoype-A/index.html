@@ -8,10 +8,6 @@
     <meta name="description" content="Interface de gestion des ouvrages" />
     <meta name="author" content="ESSARRAJ Fouad" />
     <title>Gestion des ouvrages</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
-</script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -28,55 +24,12 @@
                      
                         <div>
 
-                            <form id="formSubmit" >
+                            <form id="formSubmit" autocomplete="off">
                                 <div class="col-md-6">
                                     <label for="inputTitle" >Title</label>
                                     <input type="text"  id="inputTitle">
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="inputAuthor" >Author</label>
-                                    <input type="text" id="inputAuthor">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputPrix" >Prix</label>
-                                    <input type="number" id="inputPrix">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputDate">Date de </label>
-                                    <input type="date" id="inputDate">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputLanguage">Langue</label>
-                                    <select id="inputLanguage">
-                                        <option value="" disabled selected>choisir...</option>
-                                        <option value="français">Français</option>
-                                        <option value="anglais">Anglais</option>
-                                        <option value="arabe">Arabe</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label for="ovrageType" class="form-label">Type</label>
-                                    <div>
-                                        <input value="Roman" name="ovrageType" type="radio" id="gridCheck">
-                                        <label for="gridCheck">
-                                            Roman
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input value="Essai" name="ovrageType" type="radio" id="gridCheck">
-                                        <label  for="gridCheck">
-                                            Essai
-                                        </label>
-                                    </div>
-
-                                    <div>
-                                        <input  name="ovrageType" value="Bande-Dessinée" type="radio" id="gridCheck">
-                                        <label  for="gridCheck">
-                                            Bande-Dessinée
-                                        </label>
-                                    </div>
-
-                                </div>
+                            
                                 <div>
                                     <button id="submitButton" type="submit">Ajouter</button>
                                 </div>
@@ -88,32 +41,39 @@
                             📘
                         </div>
                         <div class="card-body">
-                            <table class="table" id="ovragesTable">
+                            <table class="table" id="ovrageTable">
                                 <thead>
                                     <tr>
-                                        <th>Titre</th>
+                                        <th>id</th>
                                         <th>Auteur</th>
-                                        <th>Prix</th>
-                                        <th>Date de publication</th>
-                                        <th>Langue</th>
-                                        <th>Type</th>
                                         <th>Actions</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        
-                                    </tr>
+                                 
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </main>
-            <footer >
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
     </div>
+    <script src="ovrage.js"></script>
+    <script src="ovrageBLO.js"></script>
     <script src="js.js"></script>
 </body>
 

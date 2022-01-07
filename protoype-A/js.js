@@ -1,19 +1,32 @@
 // declaration
-var ovrage = new ovrage();
-var ovrageBLO = new OvrageBlo();
-
+var ovrageBLO = new OvrageBLO();
+var selecteRow = null 
 
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
-    readOvrage()
-    insertNewRow(ovrage);
-    ovrageBlo.ajouteOvrage(ovrage);
+    var ovrage = readovrage();
+    if (selecteRow == null) {
+        ovrage.id = ovrageBLO.counter
+        ovrageBLO.counter++;
+        insertNewRow(ovrage);
+        ovrageBLO.ajouteOvrage(ovrage);
+    }
+    else{
+      if (confirm("Êtes-vous sûr de modifier cette œuvre?"))
+        editRow(work)
+
+        resetForm();
+   }
+   function resetForm() {
+    document.getElementById("inputTitle").value = "";
+    selectedRow = null;
+}
 })
 
-
 function readOvrage() {
-ovrage.id = ovrageBlo.conter++;
-ovrage.title = document.getElementById(inputTitle).value
+var ovrage = new Ovrage();
+ovrage.title = document.getElementById(inputTitle).value;
+selecteRow = null;
 }
 
 
@@ -22,6 +35,23 @@ function insertNewRow(ovrage) {
     var tableBody = document.getElementById("ovragesTable").getElementsByTagName('tbody')[0];
     var newRow = tableBody.insertRow(tableBody.length);
     newRow.insertCell(0).innerHTML = ovrage.id;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = ovrage.Title;
+    newRow.insertCell(1).innerHTML = ovrage.Title;
+
+    var modifierButton = document.createElement("button")
+    var suprimerButton = document.createElement("button")
+
+    var modifierContent = document.createTextNode("Edit")
+    modifierButton.appendChild(editContent)
+    modifierButton.setAttribute('onclick', 'onEdit(this)')
+
+    var modifierContent = document.createTextNode('Delete')
+    suprimerButton.appendChild(suprimerContent)
+    suprimerButton.setAttribute("onclick", 'onDelete(this)')
+
+    cell3.appendChild(modifierButton)
+    cell3.appendChild(suprimerButton)
 }
+
+
+
+
