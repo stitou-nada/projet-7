@@ -37,19 +37,6 @@ function insertNewRow(ovrage) {
     newRow.insertCell(0).innerHTML = ovrage.id;
     newRow.insertCell(1).innerHTML = ovrage.Title;
 
-    var modifierButton = document.createElement("button")
-    var suprimerButton = document.createElement("button")
-
-    var modifierContent = document.createTextNode("Edit")
-    modifierButton.appendChild(editContent)
-    modifierButton.setAttribute('onclick', 'onEdit(this)')
-
-    var modifierContent = document.createTextNode('Delete')
-    suprimerButton.appendChild(suprimerContent)
-    suprimerButton.setAttribute("onclick", 'onDelete(this)')
-
-    cell3.appendChild(modifierButton)
-    cell3.appendChild(suprimerButton)
 }
 
 
