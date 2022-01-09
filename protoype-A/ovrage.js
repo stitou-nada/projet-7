@@ -1,17 +1,20 @@
-class ovrage {
+class Ouvrage{
     #_id;
-    #_title;
+    #_titre;
 
-    get id() {
-         return this.#_id;
-    }
-    set id (value){
-        this.#_id = value;
-    }
-    get title() {
-         return this.#_title;
-    }
-    set title (value){
-        this.#_tit= value;
-    }
+  get id(){
+      return this.#_id;
+  }
+  
+  set id(value){
+      this.#_id = value;
+  }
+
+  get titre(){
+      return this.#_titre;
+  }
+
+  set titre(value){
+      this.#_titre = value;
+  }
 }

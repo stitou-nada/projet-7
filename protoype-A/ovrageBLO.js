@@ -1,26 +1,51 @@
-class OvrageBLO{
-    ovrageList = [];
-    conter = 0;
-
-    ajouteOvrage(ovrage){
-        this.ovrageList.push(ovrage)
+class OuvrageBLO {
+    #ouvrageList = [];
+    #compteur = 1;
+  
+    get ouvrageList(){
+        return this.#ouvrageList;
     }
-    modifierOvrage(ovrage){
-        for (var i = 0; i<this.ovrageList.lenght;i++) {
-          if (ovrage.id == this.ovrageList[i].id) {
-              this.ovrageList[i] = ovrage
-            
-              return ovrage
-          }
-     
-            
-        }
+  
+    addOuvrage(ouvrage) {
+        this.#compteur = this.#compteur + 1
+        ouvrage.id = this.#compteur
+        this.#ouvrageList.push(ouvrage)
     }
-    getItem(id) {
-        for (var i = 0; i < this.ovrageList.length; i++) {
-            if (id == this.ovrageList[i].id) {
-                return this.ovrageList[i]
+  
+    editOuvrage(ouvrage) {
+        console.log(ouvrage)
+        for (var i = 0; i < this.#ouvrageList.length; i++) {
+            if (ouvrage.id == this.#ouvrageList[i].id) {
+                this.#ouvrageList[i] = ouvrage
+                return ouvrage
             }
         }
     }
-}
+  
+  
+    getItem(id) {
+        for (var i = 0; i < this.ouvrageList.length; i++) {
+            if (id == this.ouvrageList[i].id) {
+                return this.ouvrageList[i]
+            }
+        }
+    }
+  
+  
+  
+  deletOuvrage(ouvrage) {
+      for (var i = 0; i < this.#ouvrageList.length; i++) {
+          if (ouvrage.id == this.#ouvrageList[i].id) {
+              this.#ouvrageList[i] = ouvrage
+              return ouvrage
+          }
+      }
+  }
+  getAllItem(){
+      return this.#ouvrageList.sort(function(a,b){
+          return a.titre.localCompare(b.titre)
+      })
+  }
+      
+  
+  }
