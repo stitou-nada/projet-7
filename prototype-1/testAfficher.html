@@ -1,22 +1,15 @@
-
 <script src="ovrage.js"></script>
-<script src="ovrageManager.js"></script>
+<script src="gestionOuvrage.js"></script>
 <script>
-    var ouvrageManager = new OuvrageManager();
-    console.log ("Avent:" + ouvrageManager.ouvrageList)
-
-    // ajouter un ouvrage
-    var ouvrage = new Ouvrage();
-    ouvrage.titre = "Mon titre";
-    ouvrageManager.addOuvrage(ouvrage)
-    ouvrageManager.addOuvrage(ouvrage)
-
-    for (var i = 0 ;  i < ouvrageManager.ouvrageList.lenght ; i++){
-         console.log("Apres : " + ouvrageManager.ouvrageList[i].titre)
-    }
+    var gestionOuvrage = new GestionOuvrage();
+    console.log("Avent:" + gestionOuvrage.ouvrageList)
 
     // afficher un ouvrage
- 
-              
-    
+    var ouvrage = new Ouvrage();
+    ouvrage.titre = "Mon titre";
+    gestionOuvrage.addOuvrage(ouvrage)
+   console.log(gestionOuvrage.ouvrageList)
+
+
+   
 </script>

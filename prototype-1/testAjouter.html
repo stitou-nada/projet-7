@@ -3,17 +3,17 @@
 <script src="gestionOuvrage.js"></script>
 
 <script>
-    var ouvrageManager = new OuvrageManager();
+    var gestionOuvrage = new GestionOuvrage();
 
-    console.log("Avent: " + ouvrageManager.ouvrageList)
+    console.log("Avent: " + gestionOuvrage.ouvrageList)
   
     // Ajouter un ouvrage
     var ouvrage = new Ouvrage();
-    ouvrage.title = "Mon titre"
-    ouvrageManager.addOuvrage(ouvrage)
-    ouvrageManager.addOuvrage(ouvrage)
+    ouvrage.titre = "Mon titre"
+    gestionOuvrage.addOuvrage(ouvrage)
+    gestionOuvrage.addOuvrage(ouvrage)
 
-    for (var i = 0; i < ouvrageManager.ouvrageList.length; i++) {
-        console.log( "apre: " + ouvrageManager.ouvrageList[i].titre)
+    for (var i = 0; i < gestionOuvrage.ouvrageList.length; i++) {
+        console.log( "apre: " + gestionOuvrage.ouvrageList[i].titre)
     }
 </script>
