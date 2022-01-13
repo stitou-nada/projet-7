@@ -1,0 +1,19 @@
+
+<script src="ovrage.js"></script>
+<script src="ovrageManager.js"></script>
+
+<script>
+    var ouvrageManager = new OuvrageManager();
+
+    console.log("Avent: " + ouvrageManager.ouvrageList)
+
+    // Ajouter un ouvrage
+    var ouvrage = new Ouvrage();
+    ouvrage.title = "My Title"
+    ouvrageManager.addOuvrage(ouvrage)
+    ouvrageManager.addOuvrage(ouvrage)
+
+    for (var i = 0; i < ouvrageManager.ouvrageList.length; i++) {
+        console.log( "apre: " + ouvrageManager.ouvrageList[i].titre)
+    }
+</script>
