@@ -1,4 +1,4 @@
-class OuvrageManager {
+class GestionOuvrage {
     #ouvrageList = [];
     #compteur = 1;
   

@@ -1,4 +1,4 @@
-var ouvrageManager = new OuvrageManager();
+var gestionOuvrage = new GestionOuvrage();
 
 var selectRow = null;
 var ouvrageId = null;
@@ -8,11 +8,11 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     var ouvrage = readOuvrage();
     if (selectRow == null) {
 
-        ouvrageManager.addOuvrage(ouvrage);
+        gestionOuvrage.addOuvrage(ouvrage);
     } else
     if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
         ouvrage.id = rowId;
-        ouvrageManager.editOuvrage(ouvrage)
+        gestionOuvrage.editOuvrage(ouvrage)
     }
 
     insertNewRow();
@@ -37,8 +37,8 @@ function readOuvrage() {
 
 
 function insertNewRow() {
-    var ouvrageList = ouvrageManager.getAllItem()
-    console.log(ouvrageManager.getAllItem())
+    var ouvrageList = gestionOuvrage.getAllItem()
+    console.log(gestionOuvrage.getAllItem())
     var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
        tableBody.deleteRow(0);

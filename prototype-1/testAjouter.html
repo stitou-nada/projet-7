@@ -1,15 +1,15 @@
 
 <script src="ovrage.js"></script>
-<script src="ovrageManager.js"></script>
+<script src="gestionOuvrage.js"></script>
 
 <script>
     var ouvrageManager = new OuvrageManager();
 
     console.log("Avent: " + ouvrageManager.ouvrageList)
-
+  
     // Ajouter un ouvrage
     var ouvrage = new Ouvrage();
-    ouvrage.title = "My Title"
+    ouvrage.title = "Mon titre"
     ouvrageManager.addOuvrage(ouvrage)
     ouvrageManager.addOuvrage(ouvrage)
 
