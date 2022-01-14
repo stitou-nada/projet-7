@@ -9,11 +9,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     if (selectRow == null) {
 
         gestionOuvrage.addOuvrage(ouvrage);
-    } else
-    if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
-        ouvrage.id = rowId;
-        gestionOuvrage.editOuvrage(ouvrage)
-    }
+    } 
 
     insertNewRow();
 
