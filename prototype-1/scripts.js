@@ -30,7 +30,7 @@ function readOuvrage() {
 
 
 function insertNewRow() {
-    var List = gestionOuvrage.getAllItem()
+    var List = gestionOuvrage.ouvrageList
     var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
        tableBody.deleteRow(0);
