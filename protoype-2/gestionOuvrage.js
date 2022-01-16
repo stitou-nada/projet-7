@@ -1,6 +1,6 @@
 class GestionOuvrage{
     #ouvrageList = [];
-    #compteur = 1;
+    #compteur = 0;
     
    get ouvrageList(){
        return this.#ouvrageList;
@@ -11,16 +11,19 @@ class GestionOuvrage{
        ouvrage.id = this.#compteur
        this.#ouvrageList.push(ouvrage)
    }
-   getItem(id){
-       for(var i = 0 ; i <this.ouvrageList.length; i++){
-           if (id == this.ouvrageList[i].id) {
-               return this.ouvrageList[i]
-           }
-       }
-   }
-   getAllItem(){
-       return this.#ouvrageList.sort(function(a,b){
-             return a.titre.localCompare(b.titre)
-       })
-   }
+   editOuvrage(ouvrage) {
+    for (var i = 0; i < this.#ouvrageList.length; i++) {
+        if (ouvrage.id == this.#ouvrageList[i].id) {
+            this.#ouvrageList[i] = ouvrage
+            return ouvrage
+        }
+    }
+  }
+  getItem(id) {
+    for (var i = 0; i < this.ouvrageList.length; i++) {
+        if (id == this.ouvrageList[i].id) {
+            return this.ouvrageList[i]
+        }
+    }
+  }
 }
