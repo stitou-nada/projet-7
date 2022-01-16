@@ -40,7 +40,7 @@ function insertNewRow() {
     var List = gestionOuvrage.ouvrageList
     var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
-       tableBody.deleteRow(0);
+       tableBody.suprimerRow(0);
    }
    for(var i = 0; i < List.length; i++){
     var newRow = tableBody.insertRow(tableBody.length);
@@ -52,13 +52,18 @@ function insertNewRow() {
 
 
     var modifierButton = document.createElement("button")
-    // var deleteButton = document.createElement("button")
+    var suprimerButton = document.createElement("button")
 
     var modifierContent = document.createTextNode("modifier")
     modifierButton.appendChild(modifierContent)
     modifierButton.setAttribute('onclick', 'modifier(this)')
+
+    var suprimerContent = document.createTextNode('suprimer')
+    suprimerButton.appendChild(suprimerContent)
+    suprimerButton.setAttribute("onclick", 'suprimer(this)')
  
-   cell3.appendChild(modifierButton) 
+   cell3.appendChild(modifierButton)  
+   cell3.appendChild(suprimerButton)  
   }
   
 }
@@ -70,4 +75,15 @@ function modifier(buttonReference) {
     ouvrage = gestionOuvrage.getItem(rowId)
     document.getElementById("inputTitle").value = ouvrage.titre;
 
+}
+function suprimer(buttonReference) {
+    if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
+        var row = buttonReference.parentElement.parentElement;
+        var rowId = row.cells[0].innerHTML
+
+        document.getElementById("ouvrageTable").deleteRow(row.rowIndex)
+        
+        gestionOuvrage.suprimerOuvrage(rowId)
+        resetForm()
+    }
 }

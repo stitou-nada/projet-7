@@ -26,4 +26,18 @@ class GestionOuvrage{
         }
     }
   }
+  suprimerOuvrage(ouvrage) {
+    for (var i = 0; i < this.#ouvrageList.length; i++) {
+        if (ouvrage.id == this.#ouvrageList[i].id) {
+            this.#ouvrageList[i] = ouvrage
+            return ouvrage
+        }
+    }
+}
+getAllItem(){
+    return this.#ouvrageList.sort(function(a,b){
+        return a.titre.localCompare(b.titre)
+    })
+}
+    
 }
