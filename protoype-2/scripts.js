@@ -12,7 +12,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     else
     if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
         ouvrage.id = rowId;
-        gestionOuvrage.editOuvrage(ouvrage)
+        gestionOuvrage.modifierOuvrage(ouvrage)
     }
 
     insertNewRow();
@@ -51,18 +51,19 @@ function insertNewRow() {
     cell3 = newRow.insertCell(2);
 
 
-    var editButton = document.createElement("button")
+    var modifierButton = document.createElement("button")
+    // var deleteButton = document.createElement("button")
 
-    var editContent = document.createTextNode("Edit")
-    editButton.appendChild(editContent)
-    editButton.setAttribute('onclick', 'onEdit(this)')
+    var modifierContent = document.createTextNode("modifier")
+    modifierButton.appendChild(modifierContent)
+    modifierButton.setAttribute('onclick', 'modifier(this)')
  
-   cell3.appendChild(editButton) 
+   cell3.appendChild(modifierButton) 
   }
   
 }
 
-function onEdit(buttonReference) {
+function modifier(buttonReference) {
     selectRow = buttonReference.parentElement.parentElement;
     rowId = selectRow.cells[0].innerHTML
     var ouvrage = new Ouvrage();

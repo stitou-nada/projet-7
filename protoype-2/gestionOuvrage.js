@@ -11,7 +11,7 @@ class GestionOuvrage{
        ouvrage.id = this.#compteur
        this.#ouvrageList.push(ouvrage)
    }
-   editOuvrage(ouvrage) {
+   modifierOuvrage(ouvrage) {
     for (var i = 0; i < this.#ouvrageList.length; i++) {
         if (ouvrage.id == this.#ouvrageList[i].id) {
             this.#ouvrageList[i] = ouvrage
