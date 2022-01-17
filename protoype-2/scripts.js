@@ -7,7 +7,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     event.preventDefault();
     var ouvrage = readOuvrage();
     if (selectRow == null) {
-    gestionOuvrage.addOuvrage(ouvrage);
+        gestionOuvrage.addOuvrage(ouvrage);
     }
     else
     if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
