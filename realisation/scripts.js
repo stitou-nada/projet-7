@@ -2,6 +2,10 @@ var gestionOuvrage = new GestionOuvrage();
 
 var selectRow = null;
 var ouvrageId = null;
+document.getElementById("showFormBtn").addEventListener("click", function() {
+    var formN = document.getElementById('formN')
+    formN.classList.toggle("d-none")
+})
 
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -49,6 +53,16 @@ function insertNewRow() {
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = List[i].titre;
     cell3 = newRow.insertCell(2);
+    cell3.inserHTML = List[i].Auteur;
+    cell4 = newRow.insertCell(3);
+    cell4.inserHTML = List[i].Prix;
+    cell5 = newRow.insertCell(4);
+    cell5.inserHTML = List[i].Date-de-publication;
+    cell6 = newRow.insertCell(5);
+    cell6.inserHTML = List[i].Langue;
+    cell7 = newRow.insertCell(6);
+    cell7.inserHTML = List[i].Type;
+    cell8 = newRow.insertCell(7);
 
 
     var modifierButton = document.createElement("button")
@@ -62,8 +76,8 @@ function insertNewRow() {
     suprimerButton.appendChild(suprimerContent)
     suprimerButton.setAttribute("onclick", 'suprimer(this)')
  
-   cell3.appendChild(modifierButton)  
-   cell3.appendChild(suprimerButton)  
+   cell8.appendChild(modifierButton)  
+   cell8.appendChild(suprimerButton)  
   }
   
 }

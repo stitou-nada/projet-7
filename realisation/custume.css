@@ -1,8 +1,8 @@
 .sb-topnav{
-    background-color: #7c5f81 !important;
+    background-color: #5f6485 !important;
 }
 .sb-sidenav{
-    background-color: #7c5f81d0 !important;
+    background-color: #676c8bd5 !important;
 }
 .sb-sidenav-footer{
 
@@ -21,10 +21,10 @@
     width: 200px !important;
 }
 .btn-primary{
-    background-color:#7c5f81 !important ;
+    background-color:#70769c !important ;
 }
 #showFormBtn{
-    background-color:#7c5f81 !important ;
+    background-color:#70769c !important ;
     color: white;
 }
 #editB{
