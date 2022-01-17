@@ -40,7 +40,7 @@ function insertNewRow() {
     var List = gestionOuvrage.ouvrageList
     var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
-       tableBody.suprimerRow(0);
+       tableBody.deleteRow(0);
    }
    for(var i = 0; i < List.length; i++){
     var newRow = tableBody.insertRow(tableBody.length);
