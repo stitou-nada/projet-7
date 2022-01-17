@@ -38,7 +38,7 @@ function readOuvrage() {
 
 function insertNewRow() {
     var List = gestionOuvrage.ouvrageList
-    var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
+    var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
        tableBody.deleteRow(0);
    }
@@ -81,7 +81,7 @@ function suprimer(buttonReference) {
         var row = buttonReference.parentElement.parentElement;
         var rowId = row.cells[0].innerHTML
 
-        document.getElementById("ouvrageTable").deleteRow(row.rowIndex)
+        document.getElementById("worksTable").deleteRow(row.rowIndex)
         
         gestionOuvrage.suprimerOuvrage(rowId)
         resetForm()
