@@ -87,10 +87,3 @@ function suprimer(buttonReference) {
         resetForm()
     }
 }
-function onPrint() {
-    var tab = document.getElementById('worksTable');
-    var win = window.ouvrir();
-    win.document.write(tab.outerHTML);
-    win.document.close();
-    win.print();
-}
