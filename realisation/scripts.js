@@ -35,6 +35,17 @@ function readOuvrage() {
     var ouvrage = new Ouvrage();
     
     ouvrage.titre = document.getElementById("inputTitle").value;
+    ouvrage.auteur = document.getElementById("inputAuthor").value;
+    ouvrage.Prix =  parseFloat(document.getElementById("inputPrix").value);
+    ouvrage.Date =  document.getElementById("inputDate").value;
+    ouvrage.Langue = document.getElementById("inputLanguage").value;
+    var cheackValues = document.getElementsByName("workType");
+    for (var i = 0; i < cheackValues.length; i++) {
+        if (cheackValues[i].checked) {
+            work["type"] = cheackValues[i].value;
+            break;
+        }
+    }
     return ouvrage;
 }
 
@@ -53,11 +64,11 @@ function insertNewRow() {
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = List[i].titre;
     cell3 = newRow.insertCell(2);
-    cell3.inserHTML = List[i].Auteur;
+    cell3.inserHTML = List[i].auteur;
     cell4 = newRow.insertCell(3);
     cell4.inserHTML = List[i].Prix;
     cell5 = newRow.insertCell(4);
-    cell5.inserHTML = List[i].Date-de-publication;
+    cell5.inserHTML = List[i].Date;
     cell6 = newRow.insertCell(5);
     cell6.inserHTML = List[i].Langue;
     cell7 = newRow.insertCell(6);
@@ -88,6 +99,11 @@ function modifier(buttonReference) {
     var ouvrage = new Ouvrage();
     ouvrage = gestionOuvrage.getItem(rowId)
     document.getElementById("inputTitle").value = ouvrage.titre;
+    // document.getElementById("inputTitle").value = ouvrage.auteur;
+    // document.getElementById("inputTitle").value = ouvrage.Prix;
+    // document.getElementById("inputTitle").value = ouvrage.Date;
+    // document.getElementById("inputTitle").value = ouvrage.Langue;
+    // document.getElementById("inputTitle").value = ouvrage.Type;
 
 }
 function suprimer(buttonReference) {
