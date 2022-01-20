@@ -133,7 +133,7 @@ function suprimer(buttonReference) {
 }
 function onPrint() {
     var tab = document.getElementById('worksTable');
-    var win = window.ouvrir();
+    var win = window.save();
     win.document.write(tab.outerHTML);
     win.document.close();
     win.print();
