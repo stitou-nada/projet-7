@@ -2,7 +2,7 @@ class GestionOuvrage {
 
      #ouvrageList = [];
      #compteur = 0;
-
+     
     get ouvrageList() {
         return this.#ouvrageList;
     }
@@ -38,22 +38,23 @@ class GestionOuvrage {
         this.enregistrer()
     }
     getAllItem() {
-        return this.#ouvrageList.sort(function (a, b) {
+        this.ouvrir()
+        return this.#ouvrageList.sort(function(a, b) {
             return a.titre.localCompare(b.titre)
         })
     }
-    enregistrer() {
+    enregistrer(){
 
         var stringList = JSON.stringify(this.#ouvrageList)
 
-        localStorage.setItem('workList', stringList)
+        localStorage.setItem('ouvrageList', stringList)
         console.log(JSON.parse(localStorage.getItem("ouvrageList")))
 
 
         localStorage.setItem('compteur', this.#compteur)
     }
 
-    ouvrir() {
+    ouvrir(){
         this.#ouvrageList = JSON.parse(localStorage.getItem("ouvrageList") || "[]")
         this.#compteur = parseInt(localStorage.getItem('compteur') || 0)
         console.log(this.#ouvrageList)

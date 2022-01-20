@@ -1,7 +1,7 @@
 var gestionOuvrage = new GestionOuvrage();
 
 var selectRow = null;
-var ouvrageId = null;
+var rowId = null;
 
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -42,6 +42,7 @@ function insertNewRow() {
    while(tableBody.rows.length > 0){
        tableBody.deleteRow(0);
    }
+   
    for(var i = 0; i < List.length; i++){
     var newRow = tableBody.insertRow(tableBody.length);
     cell1 = newRow.insertCell(0)
