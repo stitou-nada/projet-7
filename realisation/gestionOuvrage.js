@@ -35,12 +35,12 @@ class GestionOuvrage{
     })
     this.enregistrer()
 }
-getAllItem(){
-    this.ouvrir()
-    return this.#ouvrageList.sort(function(a,b){
-        return a.titre.localCompare(b.titre)
-    })
-}
+// getAllItem(){
+//     this.ouvrir()
+//     return this.#ouvrageList.sort(function(a,b){
+//         return a.titre.localCompare(b.titre)
+//     })
+// }
 enregistrer() {
 
     var stringList = JSON.stringify(this.#ouvrageList)
