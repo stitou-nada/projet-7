@@ -29,7 +29,7 @@ class GestionOuvrage{
         }
     }
   }
-  suprimerOuvrage(ouvrage) {
+  suprimerOuvrage() {
     his.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
         return ouvrage.id != id
     })
@@ -44,21 +44,13 @@ getAllItem(){
 enregistrer() {
 
     var stringList = JSON.stringify(this.#ouvrageList)
-
     localStorage.setItem('ouvrageList', stringList)
-    console.log(JSON.parse(localStorage.getItem("ouvrageList")))
-
-
     localStorage.setItem('compteur', this.#compteur)
 }
 
 ouvrir() {
     this.#ouvrageList = JSON.parse(localStorage.getItem("ouvrageList") || "[]")
     this.#compteur = parseInt(localStorage.getItem('compteur') || 0)
-    console.log(this.#ouvrageList)
-    console.log(localStorage.getItem("ouvrageList"))
-
 }
-
-    
+   
 }
