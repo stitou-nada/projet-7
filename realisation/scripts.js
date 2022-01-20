@@ -131,10 +131,11 @@ function suprimer(buttonReference) {
         resetForm()
     }
 }
-function onPrint() {
-    var tab = document.getElementById('worksTable');
-    var win = window.save();
-    win.document.write(tab.outerHTML);
-    win.document.close();
-    win.print();
+function printData()
+{
+   var divToPrint=document.getElementById("worksTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
 }
