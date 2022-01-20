@@ -30,7 +30,7 @@ class GestionOuvrage{
     }
   }
   suprimerOuvrage() {
-    his.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
+    this.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
         return ouvrage.id != id
     })
     this.enregistrer()
