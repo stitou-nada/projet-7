@@ -30,16 +30,13 @@ class GestionOuvrage{
     }
   }
   suprimerOuvrage(ouvrage) {
-      this.ouvrir
-    for (var i = 0; i < this.#ouvrageList.length; i++) {
-        if (ouvrage.id == this.#ouvrageList[i].id) {
-            this.#ouvrageList[i] = ouvrage
-            return ouvrage
-        }
-    }
+    his.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
+        return ouvrage.id != id
+    })
     this.enregistrer()
 }
 getAllItem(){
+    this.ouvrir()
     return this.#ouvrageList.sort(function(a,b){
         return a.titre.localCompare(b.titre)
     })
@@ -48,7 +45,7 @@ enregistrer() {
 
     var stringList = JSON.stringify(this.#ouvrageList)
 
-    localStorage.setItem('workList', stringList)
+    localStorage.setItem('ouvrageList', stringList)
     console.log(JSON.parse(localStorage.getItem("ouvrageList")))
 
 

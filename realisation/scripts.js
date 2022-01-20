@@ -1,7 +1,7 @@
 var gestionOuvrage = new GestionOuvrage();
 
 var selectRow = null;
-var ouvrageId = null;
+var rowId = null;
 document.getElementById("showFormBtn").addEventListener("click", function() {
     var formN = document.getElementById('formN')
     formN.classList.toggle("d-none")
