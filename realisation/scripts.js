@@ -53,7 +53,6 @@ function readOuvrage() {
 
 function insertNewRow() {
     var List = gestionOuvrage.ouvrageList
-    console.log(List)
     var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
        tableBody.deleteRow(0);
