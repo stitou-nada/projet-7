@@ -48,7 +48,7 @@ class GestionOuvrage {
         var stringList = JSON.stringify(this.#ouvrageList)
 
         localStorage.setItem('ouvrageList', stringList)
-        console.log(JSON.parse(localStorage.getItem("ouvrageList")))
+    
 
 
         localStorage.setItem('compteur', this.#compteur)
@@ -57,8 +57,7 @@ class GestionOuvrage {
     ouvrir(){
         this.#ouvrageList = JSON.parse(localStorage.getItem("ouvrageList") || "[]")
         this.#compteur = parseInt(localStorage.getItem('compteur') || 0)
-        console.log(this.#ouvrageList)
-        console.log(localStorage.getItem("ouvrageList"))
+     
 
     }
 
